@@ -38,6 +38,6 @@ namespace MyCabBooker.Models
         public string Status { get; set; }
 
         [JsonProperty("predictions")]
-        public List<Prediction> AutoCompletePlaces { get; set; }
+        public List<AutoCompletePlaceForGoogleMap> AutoCompletePlaces { get; set; }
     }
 }

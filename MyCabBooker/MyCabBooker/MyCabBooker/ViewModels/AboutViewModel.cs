@@ -3,6 +3,7 @@ using MyCabBooker.Services;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -130,7 +131,7 @@ namespace MyCabBooker.ViewModels
             }
             catch (Exception ex)
             {
-                await UserDialogs.Instance.AlertAsync("Error", "Unable to get actual location", "Ok");
+                await Application.Current.MainPage.DisplayAlert("Error", "Unable to get actual location", "Ok");
             }
         }
 
