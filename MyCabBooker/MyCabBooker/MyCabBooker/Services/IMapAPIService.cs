@@ -1,8 +1,10 @@
 ﻿using MyCabBooker.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,7 +52,7 @@ namespace MyCabBooker.Services
                     if (!string.IsNullOrWhiteSpace(json))
                     {
                         googleDirection = await Task.Run(() =>
-                           JsonConvert.DeserializeObject<GoogleDirection>(json)
+                           JsonConvert.DeserializeObject<MapDirection>(json)
                         ).ConfigureAwait(false);
 
                     }
@@ -60,7 +62,7 @@ namespace MyCabBooker.Services
             return googleDirection;
         }
 
-        public async Task<NewPlace> GetMyPlaceDetails(string text)
+        public async Task<AutoCompletePlaceForGoogleMap> GetNewPlaces(string text)
         {
             AutoCompletePlaceForGoogleMap results = null;
 
@@ -83,7 +85,7 @@ namespace MyCabBooker.Services
             return results;
         }
 
-        public async Task<NewPlace> GetPlaceDetails(string placeId)
+        public async Task<NewPlace> GetMyPlaceDetails(string placeId)
         {
             NewPlace result = null;
             using (var httpClient = CreateClient())
@@ -94,7 +96,7 @@ namespace MyCabBooker.Services
                     var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     if (!string.IsNullOrWhiteSpace(json) && json != "ERROR")
                     {
-                        result = new GooglePlace(JObject.Parse(json));
+                        result = new NewPlace(JObject.Parse(json));
                     }
                 }
             }
