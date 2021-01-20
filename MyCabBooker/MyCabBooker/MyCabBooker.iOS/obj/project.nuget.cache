@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ov1KmIDi/pG2zVX9J/RAE/sTMLHGBuq3aXrV5KKUISdZ0ySiPh0TBXLmxgPAEDbg+LK6qxyVWw/6Wic+QvbLkA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mv835e\\Documents\\GitHub\\CabService\\MyCabBooker\\MyCabBooker\\MyCabBooker.iOS\\MyCabBooker.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mv835e\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+  ],
+  "logs": []
+}
