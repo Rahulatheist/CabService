@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MyCabBooker.Models
 {
-    class MapDirection
+    public class MapDirection
     {
     
         [JsonProperty("geocoded_waypoints")]

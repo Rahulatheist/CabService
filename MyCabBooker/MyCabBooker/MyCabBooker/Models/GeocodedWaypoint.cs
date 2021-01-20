@@ -71,5 +71,33 @@ namespace MyCabBooker.Models
         public IList<object> WaypointOrder { get; set; }
     }
 
+    public class EndLocation
+    {
+
+        [JsonProperty("lat")]
+        public double Lat { get; set; }
+
+        [JsonProperty("lng")]
+        public double Lng { get; set; }
+    }
+
+    public class StartLocation
+    {
+
+        [JsonProperty("lat")]
+        public double Lat { get; set; }
+
+        [JsonProperty("lng")]
+        public double Lng { get; set; }
+    }
+    public class DistanceOp
+    {
+
+        [JsonProperty("text")]
+        public string Text { get; set; }
+
+        [JsonProperty("value")]
+        public int Value { get; set; }
+    }
 
 }

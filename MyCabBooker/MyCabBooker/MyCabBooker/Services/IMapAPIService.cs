@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MyCabBooker.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -7,8 +10,96 @@ namespace MyCabBooker.Services
 {
     public interface  IMapAPIService
     {
-        Task<GoogleDirection> GetMyDirections(string originLatitude, string originLongitude, string destinationLatitude, string destinationLongitude);
-        Task<GooglePlaceAutoCompleteResult> GetNewPlaces(string text);
-        Task<GooglePlace> GetMyPlaceDetails(string placeId);
+        Task<MapDirection> GetMyDirections(string originLatitude, string originLongitude, string destinationLatitude, string destinationLongitude);
+        Task<AutoCompletePlaceForGoogleMap> GetNewPlaces(string text);
+        Task<NewPlace> GetMyPlaceDetails(string placeId);
+    }
+
+    public class MapAPIService : IMapAPIService
+    {
+        static string _googleMapsKey;
+
+        private const string ApiBaseAddress = "https://developers.google.com/maps/";
+        private HttpClient CreateClient()
+        {
+            var httpClient = new HttpClient
+            {
+                BaseAddress = new Uri(ApiBaseAddress)
+            };
+
+            httpClient.DefaultRequestHeaders.Accept.Clear();
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            return httpClient;
+        }
+        public static void Initialize(string googleMapsKey)
+        {
+            _googleMapsKey = googleMapsKey;
+        }
+
+        public async Task<MapDirection> GetMyDirections(string originLatitude, string originLongitude, string destinationLatitude, string destinationLongitude)
+        {
+            MapDirection googleDirection = new MapDirection();
+
+            using (var httpClient = CreateClient())
+            {
+                var response = await httpClient.GetAsync($"api/directions/json?mode=driving&transit_routing_preference=less_driving&origin={originLatitude},{originLongitude}&destination={destinationLatitude},{destinationLongitude}&key={_googleMapsKey}").ConfigureAwait(false);
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (!string.IsNullOrWhiteSpace(json))
+                    {
+                        googleDirection = await Task.Run(() =>
+                           JsonConvert.DeserializeObject<GoogleDirection>(json)
+                        ).ConfigureAwait(false);
+
+                    }
+                }
+            }
+
+            return googleDirection;
+        }
+
+        public async Task<NewPlace> GetMyPlaceDetails(string text)
+        {
+            AutoCompletePlaceForGoogleMap results = null;
+
+            using (var httpClient = CreateClient())
+            {
+                var response = await httpClient.GetAsync($"api/place/autocomplete/json?input={Uri.EscapeUriString(text)}&key={_googleMapsKey}").ConfigureAwait(false);
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (!string.IsNullOrWhiteSpace(json) && json != "ERROR")
+                    {
+                        results = await Task.Run(() =>
+                           JsonConvert.DeserializeObject<AutoCompletePlaceForGoogleMap>(json)
+                        ).ConfigureAwait(false);
+
+                    }
+                }
+            }
+
+            return results;
+        }
+
+        public async Task<NewPlace> GetPlaceDetails(string placeId)
+        {
+            NewPlace result = null;
+            using (var httpClient = CreateClient())
+            {
+                var response = await httpClient.GetAsync($"api/place/details/json?placeid={Uri.EscapeUriString(placeId)}&key={_googleMapsKey}").ConfigureAwait(false);
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (!string.IsNullOrWhiteSpace(json) && json != "ERROR")
+                    {
+                        result = new GooglePlace(JObject.Parse(json));
+                    }
+                }
+            }
+
+            return result;
+        }
     }
 }
