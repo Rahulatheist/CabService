@@ -80,7 +80,7 @@ namespace MyCabBooker.ViewModels
         }
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "Search your Location";
             LoadRouteCommand = new Command(async () => await LoadRoute());
             GetPlaceDetailCommand = new Command<AutoCompletePlaceForGoogleMap>(async (param) => await GetPlacesDetail(param));
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
