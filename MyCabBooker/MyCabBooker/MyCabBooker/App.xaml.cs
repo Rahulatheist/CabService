@@ -12,7 +12,7 @@ namespace MyCabBooker
         public App()
         {
             InitializeComponent();
-            GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
+            MapAPIService.Initialize(Constants.GoogleMapsApiKey);
             DependencyService.Register<MockDataStore>();
             MainPage = new NavigationPage(new LoginPage());
         }

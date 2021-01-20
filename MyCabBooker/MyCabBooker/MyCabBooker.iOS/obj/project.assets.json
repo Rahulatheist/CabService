@@ -11,6 +11,12 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Xamarin.Build.Download/0.4.11": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -145,13 +151,46 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.GoogleMaps/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Google.iOS.Maps": "3.5.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.iOS.dll": {}
+        }
+      },
+      "Xamarin.Google.iOS.Maps/3.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "MyCabBooker/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1451"
+          "Xamarin.Forms": "4.8.0.1451",
+          "Xamarin.Forms.GoogleMaps": "3.3.0"
         },
         "compile": {
           "bin/placeholder/MyCabBooker.dll": {}
@@ -171,6 +210,12 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Xamarin.Build.Download/0.4.11": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -305,13 +350,46 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.GoogleMaps/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Google.iOS.Maps": "3.5.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.iOS.dll": {}
+        }
+      },
+      "Xamarin.Google.iOS.Maps/3.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "MyCabBooker/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1451"
+          "Xamarin.Forms": "4.8.0.1451",
+          "Xamarin.Forms.GoogleMaps": "3.3.0"
         },
         "compile": {
           "bin/placeholder/MyCabBooker.dll": {}
@@ -331,6 +409,12 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Xamarin.Build.Download/0.4.11": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -465,13 +549,46 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.GoogleMaps/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Google.iOS.Maps": "3.5.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.iOS.dll": {}
+        }
+      },
+      "Xamarin.Google.iOS.Maps/3.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "MyCabBooker/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1451"
+          "Xamarin.Forms": "4.8.0.1451",
+          "Xamarin.Forms.GoogleMaps": "3.3.0"
         },
         "compile": {
           "bin/placeholder/MyCabBooker.dll": {}
@@ -491,6 +608,12 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Xamarin.Build.Download/0.4.11": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -625,13 +748,46 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "Xamarin.Forms.GoogleMaps/3.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Google.iOS.Maps": "3.5.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.dll": {},
+          "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.iOS.dll": {}
+        }
+      },
+      "Xamarin.Google.iOS.Maps/3.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Build.Download": "0.4.11"
+        },
+        "frameworkAssemblies": [
+          "Xamarin.iOS"
+        ],
+        "compile": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Google.Maps.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "MyCabBooker/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1451"
+          "Xamarin.Forms": "4.8.0.1451",
+          "Xamarin.Forms.GoogleMaps": "3.3.0"
         },
         "compile": {
           "bin/placeholder/MyCabBooker.dll": {}
@@ -672,6 +828,24 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Xamarin.Build.Download/0.4.11": {
+      "sha512": "svGAoBnMVQwUbIv1+j7vDypY+2R7jruefJRmVsxhuvSFXMP8dV+yZK3UGuZa3zV5ThKimk9eqHuvRcl/JVipbA==",
+      "type": "package",
+      "path": "xamarin.build.download/0.4.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/Mono.Cecil.dll",
+        "build/Newtonsoft.Json.dll",
+        "build/System.Net.Http.Formatting.dll",
+        "build/Xamarin.Build.Download.dll",
+        "build/Xamarin.Build.Download.props",
+        "build/Xamarin.Build.Download.targets",
+        "xamarin.build.download.0.4.11.nupkg.sha512",
+        "xamarin.build.download.nuspec"
       ]
     },
     "Xamarin.Essentials/1.5.3.2": {
@@ -1036,6 +1210,39 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
         "xamarin.forms.4.8.0.1451.nupkg.sha512",
         "xamarin.forms.nuspec"
+      ]
+    },
+    "Xamarin.Forms.GoogleMaps/3.3.0": {
+      "sha512": "C1wutzR7wLgUQuiG1NgArab0X02DGOKWW10+uLBUJE+Cac0+8J/TlLVqdqEl82BDGl3n71zmiLnHd5AZlrFEfw==",
+      "type": "package",
+      "path": "xamarin.forms.googlemaps/3.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid70/Xamarin.Forms.GoogleMaps.Android.dll",
+        "lib/MonoAndroid70/Xamarin.Forms.GoogleMaps.dll",
+        "lib/UAP10/Xamarin.Forms.GoogleMaps.UWP.dll",
+        "lib/UAP10/Xamarin.Forms.GoogleMaps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.GoogleMaps.iOS.dll",
+        "lib/netstandard1.0/Xamarin.Forms.GoogleMaps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.GoogleMaps.dll",
+        "xamarin.forms.googlemaps.3.3.0.nupkg.sha512",
+        "xamarin.forms.googlemaps.nuspec"
+      ]
+    },
+    "Xamarin.Google.iOS.Maps/3.5.0": {
+      "sha512": "aQnxCVYDwW4e7z+14CnQmxag05XRULfmfg4t+6IlsZN/nEmYHcyiX1DqWHhdQF/prJsKU0dFeRNyB7tL/g00Qw==",
+      "type": "package",
+      "path": "xamarin.google.ios.maps/3.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Xamarin.Google.iOS.Maps.targets",
+        "lib/xamarinios10/Google.Maps.dll",
+        "xamarin.google.ios.maps.3.5.0.nupkg.sha512",
+        "xamarin.google.ios.maps.nuspec"
       ]
     },
     "MyCabBooker/1.0.0": {

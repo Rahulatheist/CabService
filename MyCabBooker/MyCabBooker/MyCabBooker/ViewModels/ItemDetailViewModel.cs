@@ -53,5 +53,10 @@ namespace MyCabBooker.ViewModels
                 Debug.WriteLine("Failed to Load Item");
             }
         }
+
+        public ItemDetailViewModel()
+        {
+
+        }
     }
 }

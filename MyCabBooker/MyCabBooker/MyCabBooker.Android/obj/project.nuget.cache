@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "02zyUfGpk8jNzE3L8gLOC6eyPQKJesu9Gj7/z8zAemgwJXbIh+V4GyDUGNxtQlCnuQxaQ4jPVODv+dFbhHiNfA==",
+  "dgSpecHash": "1z5qpWTPYcn/F4Nh8FPw1X7e1jeXgwO1Bg0yMseUVXmxk1P1PJE6V2SkqHVoVp3e3bJjxtxakQYPrrz97/zn3g==",
   "success": true,
   "projectFilePath": "C:\\Users\\mv835e\\Documents\\GitHub\\CabService\\MyCabBooker\\MyCabBooker\\MyCabBooker.Android\\MyCabBooker.Android.csproj",
   "expectedPackageFiles": [
@@ -42,8 +42,14 @@
     "C:\\Users\\mv835e\\.nuget\\packages\\xamarin.android.support.vector.drawable\\28.0.0.3\\xamarin.android.support.vector.drawable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
+    "C:\\Users\\mv835e\\.nuget\\packages\\xamarin.build.download\\0.4.9\\xamarin.build.download.0.4.9.nupkg.sha512",
     "C:\\Users\\mv835e\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512",
+    "C:\\Users\\mv835e\\.nuget\\packages\\xamarin.forms.googlemaps\\3.3.0\\xamarin.forms.googlemaps.3.3.0.nupkg.sha512",
+    "C:\\Users\\mv835e\\.nuget\\packages\\xamarin.googleplayservices.base\\60.1142.1\\xamarin.googleplayservices.base.60.1142.1.nupkg.sha512",
+    "C:\\Users\\mv835e\\.nuget\\packages\\xamarin.googleplayservices.basement\\60.1142.1\\xamarin.googleplayservices.basement.60.1142.1.nupkg.sha512",
+    "C:\\Users\\mv835e\\.nuget\\packages\\xamarin.googleplayservices.maps\\60.1142.1\\xamarin.googleplayservices.maps.60.1142.1.nupkg.sha512",
+    "C:\\Users\\mv835e\\.nuget\\packages\\xamarin.googleplayservices.tasks\\60.1142.1\\xamarin.googleplayservices.tasks.60.1142.1.nupkg.sha512"
   ],
   "logs": []
 }

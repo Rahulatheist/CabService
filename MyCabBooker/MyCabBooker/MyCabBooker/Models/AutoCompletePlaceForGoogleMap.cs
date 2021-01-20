@@ -33,6 +33,7 @@ namespace MyCabBooker.Models
     }
     public class AutoCompletePlaceForGoogleMap
     {
+        public string PlaceId { get; set; }
         [JsonProperty("status")]
         public string Status { get; set; }
 
