@@ -21,7 +21,7 @@ namespace MyCabBooker.Services
     {
         static string _googleMapsKey;
 
-        private const string ApiBaseAddress = "https://developers.google.com/maps/";
+        private const string ApiBaseAddress = "https://maps.googleapis.com/maps/";
         private HttpClient CreateClient()
         {
             var httpClient = new HttpClient
